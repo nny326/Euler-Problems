@@ -1,4 +1,5 @@
-.gitgnore
+.gitignore
 *.pyc
 .vscode
 Euler-offline
+Untitled*

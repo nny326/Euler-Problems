@@ -1,24 +1,20 @@
 """
-  Problem 5:  
- 
-  Desc.:  2520 is the smallest number that can be divided by each of the numbers
-   from 1 to 10 without any remainder.
-
-  Problem:  What is the smallest positive number that is evenly divisible by all of
-   the numbers from 1 to 20?
-
+Problem 5:
+  Desc.:  2520 is the smallest NUMber that can be divided by each of the NUMbers \
+      from 1 to 10 without any remainder.
+  Problem:  What is the smallest positive NUMber that is evenly divisible by all of \
+      the NUMbers from 1 to 20?
 """
+X, FACTORS, NUM = 1, list(range(1, 11)), 0
 
-x, factors, num = 1, list(range(1,11)), 0
+while NUM == 0:
+    for factor in FACTORS:
+        mul = X/factor
+        if not mul.is_integer():
+            X += 1
+            # print(X)
+            break
+        elif factor == FACTORS[-1]:
+            NUM = X
 
-while (num == 0):
-  for factor in factors:
-    mul = x/factor
-    if not mul.is_integer():
-      x += 1
-      # print(x)
-      break
-    elif factor == factors[-1]:
-      num = x
-
-print(num)
+print(NUM)
